@@ -1,0 +1,23 @@
+Package: ela3
+Type: Package
+Title: Tool to explore data on graduates in Poland, graduates from 2016
+Version: 0.1.0
+Depends: R (>= 2.10.0),
+         magrittr 
+Author: Piotr Teisseyre
+Maintainer: Piotr Teisseyre <pteisseyre@gmail.com>
+Description: ela3 package contains data from the ELA (EKonomiczne Losy Absolwentow) project. Functions help you explore data and find study programmes. Find out more about data and indicators in data documentation. 
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.0
+Imports:
+    assertthat,
+    dplyr,
+    htmltools,
+    lazyeval,
+    leaflet, 
+    plotly
+Suggests: testthat
+URL: http://github.com/pteisseyre/ela3
+BugReports: http://github.com/pteisseyre/ela3/issues
