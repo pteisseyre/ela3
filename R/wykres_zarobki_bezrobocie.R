@@ -21,6 +21,11 @@ wykres_zarobki_bezrobocie <- function(kierunek, stopien = c('1', '2', 'JM')) {
   # Assert that the name of study programme is a character value
   assertthat::assert_that(is.character(kierunek), msg = 'Name of the study programme (kierunek) should be a character value')
 
+  # Stop if stopien is not one of the values: '1', '2', 'JM'
+  if (!('1' %in%  stopien | '2' %in% stopien | '3' %in% stopien)) {
+    stop("stopien must be either '1', '2', 'JM'")
+  }
+
   plot_data <- dane %>%
     dplyr::filter(grepl(tolower(kierunek), kierunek_studiow),
            stopien_studiow %in% stopien) %>%
