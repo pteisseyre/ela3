@@ -30,8 +30,6 @@ wyszukaj_studia_tabela <- function(kierunek, stopien = c('1', '2', 'JM'),
                                    min_wynagrodzenie_brutto = NULL,
                                    max_czas_poszukiwania_pracy = NULL) {
 
-  data(dane)
-
   # Assert that the name of study programme is a character value
   assertthat::assert_that(is.character(kierunek), msg = 'Name of the study programme (kierunek) should be a character value')
 

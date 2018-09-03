@@ -19,8 +19,6 @@
 #' liczba_absolwentow('ekonomia', stopien = c('1', '2'))
 liczba_absolwentow <- function(kierunek, stopien = c('1', '2', 'JM'), liczba_kierunkow = 10){
 
-  data(dane)
-
   # Assert that the name of study programme is a character value
   assertthat::assert_that(is.character(kierunek), msg = "Name of the study programme (kierunek) should be a character value")
 
