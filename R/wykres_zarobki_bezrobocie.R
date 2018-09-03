@@ -18,6 +18,9 @@
 #' wykres_zarobki_bezrobocie('socjologia', stopien = c('1', '2'))
 wykres_zarobki_bezrobocie <- function(kierunek, stopien = c('1', '2', 'JM')) {
 
+  # Setting variables to null
+  kierunek_studiow <- stopien_studiow <- uczelnia <- wydzial <- head <- wynagrodzenie_wzgledne <- bezrobocie_wzgledne <- NULL
+
   # Assert that the name of study programme is a character value
   assertthat::assert_that(is.character(kierunek), msg = 'Name of the study programme (kierunek) should be a character value')
 

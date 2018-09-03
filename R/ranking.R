@@ -27,6 +27,9 @@
 #' ranking('socjologia')
 ranking <- function(kierunek, wskaznik = 'wynagrodzenie_brutto', stopien = c('1', '2', 'JM'), liczba_kierunkow = 10, kolejnosc_malejaca = TRUE){
 
+  # Setting variables to null
+  kierunek_studiow <- stopien_studiow <- uczelnia <- wydzial <- head <- NULL
+
   # Assert that the name of study programme is a character value
   assertthat::assert_that(is.character(kierunek), msg = "Name of the study programme (kierunek) should be a character value")
 

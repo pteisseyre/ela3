@@ -30,6 +30,9 @@ wyszukaj_studia_mapa <- function(kierunek, stopien = c('1', '2', 'JM'),
                                  min_wynagrodzenie_brutto = NULL,
                                  max_czas_poszukiwania_pracy = NULL) {
 
+  # Setting variables to null
+  kierunek_studiow <- stopien_studiow <- uczelnia <- wydzial <- head <- wynagrodzenie_brutto <- czas_poszukiwania_pracy <- lat <- lon <- NULL
+
   # Assert that the name of study programme is a character value
   assertthat::assert_that(is.character(kierunek), msg = 'Name of the study programme (kierunek) should be a character value')
 
